@@ -1,0 +1,39 @@
+<div class="content">
+<h1 style="text-align:center;color: rgb(224, 84, 84);">Create Products</h1>
+<div class="container">
+<form #productsForm="ngForm" (ngSubmit)="onCreateProducts(productsForm.value)">
+  <div class="dataAddition">
+    <h4 style="text-align:center ;">Add Products</h4>
+    <label>Name:</label>
+    <br>
+    <input type="text"name="P_name" ngModel>
+    <br>
+    <label>Price:</label>
+    <br>
+    <input type="text"name="P_Price" ngModel>
+  <br>
+    <label>Color:</label>
+    <br>
+    <input type="text"name="P_Color" ngModel>
+    <button class="Submit_bt" type="submit">Submit</button>
+  </div>
+</form>
+<div class="DataTable">
+<table  id="customers">
+  <thead>
+    <td>ProductName</td>
+    <td>ProductColor</td>
+    <td>ProductPrice</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of allProducts">
+      <td>{{item.P_name}}</td>
+      <td> {{item.P_Price}}</td>
+      <td>{{item.P_Color}}</td>
+    </tr>
+  </tbody>
+</table>
+<button type="submit" class="ShowData" (click)="fetchPoducts()">show products</button>
+</div>
+</div>
+</div>

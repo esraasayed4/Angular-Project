@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+}
+.product {
+  padding:40px;
+  /* background-color: #85f1f1; */
+  margin-top:20px;
+}
+
+

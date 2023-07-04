@@ -1,0 +1,19 @@
+<div>
+  <app-filter></app-filter>
+  <app-search (searchTextChanged)=" OnSearchTextEntered($event)"></app-search></div>
+<div class="row" >
+  <div class="product"*ngFor="let item of products">
+    <div class="item.container"*ngIf="searchText===''|| item.color.toLowerCase().includes(searchText)">
+    <div>
+      <img  src="{{item.image}}" alt="" style="max-width:100%">
+    <div class="details"style="margin-left:26px ;" >
+      <div><b>price:</b> {{item.price}}</div>
+      <div><b>color:</b> {{item.color}}</div>
+      <div>{{item.Available}}</div>
+    </div>
+    <button  (click)="showAlert()"style="background-color:#e69cb2;margin-top:10px;margin-left:26px ;height: 30px;width: 110px;font-size: 15px;border-radius: 20px;">Buy Now</button>
+</div>
+  </div>
+  </div>
+</div>
+<!-- The $event parameter represents the event object emitted by the searchTextChanged event -->

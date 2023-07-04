@@ -1,0 +1,13 @@
+.naviBar{
+  background-color:white;
+}
+.naviBar a {
+   margin-right: 20px; /*for do space between each link  */
+   text-decoration: none; /*to remove the underline from links  */
+   font-family: Roboto,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
